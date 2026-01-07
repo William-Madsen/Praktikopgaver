@@ -4,13 +4,13 @@ public class Third
 {  
     static void Main()
     {
-        int number = 5;
+        int number = 0;
         
         if (number < 0)
         {
             Console.WriteLine("negative");
         }
-        else if{number > 0}
+        else if(number > 0)
         {
             Console.WriteLine("Positive");
         }
