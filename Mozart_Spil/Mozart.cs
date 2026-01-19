@@ -34,8 +34,10 @@ class MozartValse
         {
             Console.WriteLine("Ugyldigt valg, bruger Piano.");
         }
-        // Enter youre own path here
-        basePath = $"/Mozaar/mozar/{instrument}t";
+
+        string basePath = $"/Users/williamlundmadsen/Hvoedforlob_1/Mozaar/mozar/{instrument}t";
+        Console.WriteLine($"Valgt instrument: {instrument}");
+        Console.WriteLine("Spiller vers...");
            
 
         // -------- Menuet --------
@@ -62,7 +64,11 @@ class MozartValse
     static void PlaySound(string path)
     { // hvis jeg var på windows ville dette virker
         
-        SoundPlayer player = new SoundPlayer(path);
-        player.PlaySync();
+        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+        {
+            FileName = path,
+            UseShellExecute = true
+        });
+        System.Threading.Thread.Sleep(2000);
     }
 }
