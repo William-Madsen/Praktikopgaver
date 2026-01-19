@@ -34,8 +34,8 @@ class MozartValse
         {
             Console.WriteLine("Ugyldigt valg, bruger Piano.");
         }
-
-        basePath = $"/Users/williamlundmadsen/Hvoedforlob_1/Mozaar/mozar/{instrument}t";
+        // Enter youre own path here
+        basePath = $"/Mozaar/mozar/{instrument}t";
            
 
         // -------- Menuet --------
