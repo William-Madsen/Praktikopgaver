@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Media;
 
 class MozartValse
@@ -8,7 +8,7 @@ class MozartValse
         
         Random rnd = new Random();
 
-        Console.WriteLine("Vælg instrument (Piano eller Mbira):");
+        Console.WriteLine("Vælg instrument (Piano, Mbira, Flute-harp eller Clarinet):");
         string input = Console.ReadLine();
 
         string instrument = "Piano"; // standard
@@ -16,11 +16,19 @@ class MozartValse
 
         if (input == "Piano")
         {
-            instrument = "Piano";
+            instrument = "piano";
         }
         else if (input == "Mbira")
         {
-            instrument = "Mbira";
+            instrument = "mbira";
+        }
+        else if (input == "Flute-harp")
+        {
+            instrument = "flute-harp";
+        }
+        else if (input == "Clarinet")
+        {
+            instrument = "clarinet";
         }
         else
         {
@@ -48,11 +56,11 @@ class MozartValse
             PlaySound(file);
         }
 
-        Console.WriteLine("Vals færdig ");
+        Console.WriteLine("Vals færdig");
     }
 
     static void PlaySound(string path)
-    { //Vriker kun på windows (.net 8.0) 
+    { // hvis jeg var på windows ville dette virker
         
         SoundPlayer player = new SoundPlayer(path);
         player.PlaySync();
